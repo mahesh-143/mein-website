@@ -23,9 +23,16 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <!-- Font preloads -->
 <link
   rel="preload"
-  href="/fonts/Montserrat-Bold.tff"
+  href="/fonts/Montserrat-Bold.ttf"
   as="font"
-  type="font/tff"
+  type="font/truetype"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Inter-Regular.ttf"
+  as="font"
+  type="font/truetype"
   crossorigin
 />
 
