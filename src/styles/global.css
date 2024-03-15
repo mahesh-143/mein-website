@@ -25,6 +25,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -34,12 +43,13 @@ body {
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
+  color: rgb(var(--black));
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.7;
 }
 main {
-  width: 720px;
+  width: 960px;
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 3em 1em;

@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="project">
+  <img width={280} height={184} src="/public/blog-placeholder-1.jpg" />
+  <h3 class="project--title">Project Name</h3>
+  <p class="project--desc">Lorem ipsum dolor sit amet co. Atque</p>
+  <div class="button--group">
+    <button class="button button--primary">
+      <Icon name="mdi:github" />
+      <span>Github</span>
+    </button>
+    <button class="button button--secondary">Live</button>
+  </div>
+  <style>
+    .project {
+      border-radius: 5px;
+    }
+    .button {
+      border: 1px solid rgba(var(--black), 0.2);
+      border-radius: 5px;
+      font-weight: 600;
+      padding: 1em;
+      cursor: pointer;
+    }
+    .button:hover {
+      opacity: 0.5;
+    }
+    .button--primary {
+      color: rgb(var(--white));
+      background-color: rgb(var(--black));
+    }
+    .button--secondary {
+      color: rgb(var(--black));
+      background-color: rgb(var(--white));
+    }
+  </style>
+</div>
