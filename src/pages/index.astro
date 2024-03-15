@@ -4,12 +4,16 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import BlogCard from "../components/BlogCard.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
 
 const posts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const projects = (await getCollection("project"))
+  .map((project) => project)
   .slice(0, 3);
 ---
 
@@ -31,27 +35,13 @@ const posts = (await getCollection("blog"))
       <section class="section">
         <h2>Projects</h2>
         <div class="section--container">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects.map((project) => <ProjectCard project={project} />)}
         </div>
       </section>
       <section class="section">
         <h2>Articles</h2>
         <div class="section--container">
-          {
-            posts.map((post) => (
-              <div class="blog_card">
-                <a href={`/blog/${post.slug}/`}>
-                  <h3 class="blog_card--title">{post.data.title}</h3>
-                  <p class="blog_card--date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                  <p class="blog-card--desc">{post.data.description}</p>
-                </a>
-              </div>
-            ))
-          }
+          {posts.map((post) => <BlogCard post={post} />)}
         </div>
       </section>
     </main>
@@ -66,30 +56,11 @@ const posts = (await getCollection("blog"))
       .section--container {
         display: flex;
         flex-wrap: wrap;
-        gap: 2em;
+        gap: 2.375em;
+        justify-content: center;
       }
-
-      @media (max-width: 720px) {
-        .section--container {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-      .blog_card {
-        border: 1px solid rgba(var(--black), 0.2);
-        border-radius: 5px;
-        padding: 1em;
-        width: 246px;
-      }
-      .blog_card a {
-        text-decoration: none;
-      }
-      .blog-card--desc {
-        color: rgb(var(--black));
-      }
-      .blog_card--date {
-        color: rgba(var(--black), 0.7);
-        font-size: 0.875em;
+      .section > h2 {
+        margin-bottom: 1em;
       }
     </style>
   </body>

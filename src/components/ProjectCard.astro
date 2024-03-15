@@ -1,21 +1,32 @@
 ---
 import { Icon } from "astro-icon/components";
+
+const { project } = Astro.props;
 ---
 
 <div class="project">
-  <img width={280} height={184} src="/public/blog-placeholder-1.jpg" />
-  <h3 class="project--title">Project Name</h3>
-  <p class="project--desc">Lorem ipsum dolor sit amet co. Atque</p>
-  <div class="button--group">
-    <button class="button button--primary">
-      <Icon name="mdi:github" />
-      <span>Github</span>
-    </button>
-    <button class="button button--secondary">Live</button>
+  <a href={`/project/${project.slug}`}>
+    <img width={280} height={184} src={project.data.heroImage} />
+  </a>
+  <div class="project--info">
+    <h3 class="project--title">{project.data.title}</h3>
+    <p class="project--desc">
+      {project.data.description}
+    </p>
   </div>
   <style>
+    h3,
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+    }
     .project {
       border-radius: 5px;
+      width: 280px;
+      border: 1px solid rgba(var(--black), 0.2);
     }
     .button {
       border: 1px solid rgba(var(--black), 0.2);
@@ -34,6 +45,9 @@ import { Icon } from "astro-icon/components";
     .button--secondary {
       color: rgb(var(--black));
       background-color: rgb(var(--white));
+    }
+    .project--info {
+      padding: 1em;
     }
   </style>
 </div>
