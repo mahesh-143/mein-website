@@ -9,6 +9,9 @@ const { post } = Astro.props;
     <p class="blog_card--date">
       <FormattedDate date={post.data.pubDate} />
     </p>
+    <div class="tags">
+      {post.data.tags.map((tag: string) => <span>#{tag}</span>)}
+    </div>
     <p class="blog-card--desc">{post.data.description}</p>
   </a>
 </div>
@@ -16,15 +19,18 @@ const { post } = Astro.props;
   h3,
   p {
     margin: 0;
-    margin-bottom: 0.3em;
   }
   .blog_card {
     border: 1px solid rgba(var(--black), 0.2);
     border-radius: 5px;
     padding: 1em;
     width: 246px;
-    height: 136px;
+    height: 156px;
     overflow: hidden;
+  }
+  .tags {
+    display: flex;
+    gap: 1em;
   }
 
   @media (max-width: 635px) {
