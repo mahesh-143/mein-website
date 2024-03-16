@@ -4,6 +4,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import { Icon } from "astro-icon/components";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -15,28 +16,31 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <BaseHead title={title} description={description} />
     <style>
       main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
+        padding-top: 1em;
+      }
       .prose {
-        width: 720px;
+        width: 928px;
         max-width: calc(100% - 2em);
         margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
+        color: rgb(var(--black));
       }
       .title {
-        margin-bottom: 1em;
+        margin-bottom: 2em;
         padding: 1em 0;
-        text-align: center;
         line-height: 1;
       }
       .title h1 {
-        margin: 0 0 0.5em 0;
+        margin: 0 0 1em 0;
       }
       .date {
         margin-bottom: 0.5em;
-        color: rgb(var(--gray));
+        color: rgba(var(--black), 0.7);
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+      }
+      [data-icon] {
+        font-size: 1.3em;
       }
       .last-updated-on {
         font-style: italic;
@@ -47,26 +51,25 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <body>
     <Header />
     <main>
-      <article>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
+      <article class="prose">
+        <div class="title">
+          <h1>{title}</h1>
+          <div class="date">
+            <Icon name="mdi:calendar-outline" />
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <div class="last-updated-on">
+                  <Icon name="mdi:calendar-outline" />
+                  Last updated on <FormattedDate date={updatedDate} />
+                </div>
+              )
+            }
           </div>
-          <slot />
         </div>
+        <slot />
       </article>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
