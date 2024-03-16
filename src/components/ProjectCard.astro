@@ -15,11 +15,19 @@ const { project } = Astro.props;
     </p>
   </div>
   <div class="button--group">
-    <button class="button button--primary">
-      <Icon name="mdi:github" />
-      <span>Github</span>
-    </button>
-    <button class="button button--secondary">Live</button>
+    <a href={project.data.github}>
+      <button class="button button--primary">
+        <Icon name="mdi:github" />
+        <span>source</span>
+      </button>
+    </a>
+    {
+      project.data.live && (
+        <a href={project.data.live}>
+          <button class="button button--secondary">Live</button>
+        </a>
+      )
+    }
   </div>
 </div>
 <style>
@@ -63,6 +71,9 @@ const { project } = Astro.props;
   }
   .button--group {
     padding: 1em;
+    display: flex;
+    align-items: stretch;
+    gap: 1em;
   }
   .button {
     border: 1px solid rgba(var(--black), 0.2);
@@ -70,6 +81,9 @@ const { project } = Astro.props;
     font-weight: 600;
     padding: 1em;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
   }
   .button:hover {
     opacity: 0.5;
@@ -84,5 +98,8 @@ const { project } = Astro.props;
   }
   .project--info {
     padding: 1em;
+  }
+  [data-icon] {
+    font-size: 1.5rem;
   }
 </style>
