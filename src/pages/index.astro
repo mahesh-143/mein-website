@@ -54,13 +54,23 @@ const projects = (await getCollection("project"))
         margin-top: 4em;
       }
       .section--container {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2.375em;
         justify-content: center;
       }
       .section > h2 {
         margin-bottom: 1em;
+      }
+      @media (max-width: 940px) {
+        .section--container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .section--container {
+          grid-template-columns: repeat(1, 1fr);
+        }
       }
     </style>
   </body>

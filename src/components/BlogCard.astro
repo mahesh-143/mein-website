@@ -26,7 +26,6 @@ const { post } = Astro.props;
     border: 1px solid rgba(var(--black), 0.2);
     border-radius: 5px;
     padding: 1em;
-    width: 246px;
     height: 156px;
     overflow: hidden;
   }
@@ -34,14 +33,11 @@ const { post } = Astro.props;
     display: flex;
     gap: 1em;
   }
-
-  @media (max-width: 635px) {
-    .blog_card {
-      width: 100%;
-    }
-  }
   .blog_card a {
     text-decoration: none;
+  }
+  .blog_card a:hover {
+    opacity: 0.5;
   }
   .blog-card--desc {
     color: rgb(var(--black));

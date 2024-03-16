@@ -41,9 +41,8 @@ const { project } = Astro.props;
   }
   img {
     transition: transform 0.2s;
-    height: 184px;
     border-bottom: 1px solid rgba(var(--black), 0.2);
-    max-width: 100%;
+    width: 100%;
   }
   img:hover {
     transform: scale(1.1);
@@ -51,7 +50,6 @@ const { project } = Astro.props;
   }
   .project {
     border-radius: 5px;
-    width: 280px;
     border: 1px solid rgba(var(--black), 0.2);
     display: flex;
     flex-direction: column;
@@ -63,9 +61,8 @@ const { project } = Astro.props;
     }
     img {
       height: auto;
-      max-width: 100%;
     }
-    img {
+    img:hover {
       transform: scale(1);
     }
   }
