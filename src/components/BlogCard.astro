@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import FormattedDate from "../components/FormattedDate.astro";
 const { post } = Astro.props;
 ---
@@ -7,6 +8,7 @@ const { post } = Astro.props;
   <a href={`/blog/${post.slug}/`}>
     <h3 class="blog_card--title">{post.data.title}</h3>
     <p class="blog_card--date">
+      <Icon name="mdi:calendar-outline" />
       <FormattedDate date={post.data.pubDate} />
     </p>
     <div class="tags">
@@ -51,6 +53,9 @@ const { post } = Astro.props;
     -webkit-box-orient: vertical;
   }
   .blog_card--date {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
     color: rgba(var(--black), 0.7);
     font-size: 0.875em;
   }
