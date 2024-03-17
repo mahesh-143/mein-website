@@ -20,13 +20,16 @@ const { project } = Astro.props;
     <a href={project.data.github}>
       <button class="button button--primary">
         <Icon name="mdi:github" />
-        <span>source</span>
+        <span>Source Code</span>
       </button>
     </a>
     {
       project.data.live && (
         <a href={project.data.live}>
-          <button class="button button--secondary">Live</button>
+          <button class="button button--secondary">
+            <Icon name="mdi:play" />
+            <span>Live</span>
+          </button>
         </a>
       )
     }
@@ -81,18 +84,13 @@ const { project } = Astro.props;
       display: flex;
       align-items: center;
       gap: 0.3em;
+      color: rgb(var(--primary));
+      background-color: rgb(var(--background_color));
       height: 100%;
     }
     .button:hover {
-      opacity: 0.5;
-    }
-    .button--primary {
       color: rgb(var(--background_color));
       background-color: rgb(var(--primary));
-    }
-    .button--secondary {
-      color: rgb(var(--primary));
-      background-color: rgb(var(--background_color));
     }
     .project--info {
       padding: 1em;

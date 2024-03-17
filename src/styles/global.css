@@ -5,14 +5,14 @@
  */
 
 :root {
-  --accent: #287f85;
+  --accent: #51d1c5;
   --primary: 80, 80, 80;
   --background_color: 254, 254, 254;
 }
 
 .dark {
   --primary: 254, 254, 254;
-  --background_color: 31, 31, 31;
+  --background_color: 22, 25, 35;
 }
 
 @font-face {
