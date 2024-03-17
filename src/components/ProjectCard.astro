@@ -42,16 +42,16 @@ const { project } = Astro.props;
     }
     img {
       transition: transform 0.2s;
-      border-bottom: 1px solid rgba(var(--black), 0.2);
+      border-bottom: 1px solid rgba(var(--primary), 0.2);
       width: 100%;
     }
     img:hover {
       transform: scale(1.1);
-      border: 1px solid rgba(var(--black), 0.2);
+      border: 1px solid rgba(var(--primary), 0.2);
     }
     .project {
       border-radius: 5px;
-      border: 1px solid rgba(var(--black), 0.2);
+      border: 1px solid rgba(var(--primary), 0.2);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -73,7 +73,7 @@ const { project } = Astro.props;
       gap: 1em;
     }
     .button {
-      border: 1px solid rgba(var(--black), 0.2);
+      border: 1px solid rgba(var(--primary), 0.2);
       border-radius: 5px;
       font-weight: 600;
       padding: 1em;
@@ -87,12 +87,12 @@ const { project } = Astro.props;
       opacity: 0.5;
     }
     .button--primary {
-      color: rgb(var(--white));
-      background-color: rgb(var(--black));
+      color: rgb(var(--background_color));
+      background-color: rgb(var(--primary));
     }
     .button--secondary {
-      color: rgb(var(--black));
-      background-color: rgb(var(--white));
+      color: rgb(var(--primary));
+      background-color: rgb(var(--background_color));
     }
     .project--info {
       padding: 1em;

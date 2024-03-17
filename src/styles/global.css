@@ -6,11 +6,15 @@
 
 :root {
   --accent: #287f85;
-  --black: 80, 80, 80;
-  --white: 254, 254, 254;
-  --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
-    0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  --primary: 80, 80, 80;
+  --background_color: 254, 254, 254;
 }
+
+.dark {
+  --primary: 254, 254, 254;
+  --background_color: 31, 31, 31;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
@@ -18,6 +22,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.ttf") format("truetype");
@@ -39,21 +44,23 @@ body {
   margin: 0;
   padding: 0;
   text-align: left;
-  background: rgb(var(--white));
+  background: rgb(var(--background_color));
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--black));
+  color: rgb(var(--primary));
   font-size: 16px;
   font-weight: 500;
   line-height: 1.7;
 }
+
 main {
   width: 960px;
   max-width: calc(100% - 2em);
   margin: auto;
   padding: 3em 1em;
 }
+
 h1,
 h2,
 h3,
@@ -62,68 +69,85 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
+  color: rgb(var(--primary));
   line-height: 1.2;
 }
+
 h1 {
   font-size: 2em;
 }
+
 h2 {
   font-size: 1.5em;
 }
+
 h3 {
   font-size: 1.25em;
 }
+
 h4 {
   font-size: 1em;
 }
+
 strong,
 b {
   font-weight: 700;
 }
+
 a {
   color: var(--accent);
 }
+
 a:hover {
   text-decoration: none;
   color: var(--accent);
 }
+
 p {
   margin-bottom: 1em;
 }
+
 .prose p {
   margin-bottom: 2em;
 }
+
 textarea {
   width: 100%;
   font-size: 16px;
 }
+
 input {
   font-size: 16px;
 }
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
 }
+
 code {
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
   border-radius: 2px;
 }
+
 pre {
   padding: 1.5em;
   border-radius: 5px;
 }
+
 pre > code {
   all: unset;
 }
+
 blockquote {
   border-left: 4px solid var(--accent);
   padding: 0 0 0 20px;
   margin: 0px;
   font-size: 1.333em;
 }
+
 @media (max-width: 720px) {
   main {
     padding: 1em;
