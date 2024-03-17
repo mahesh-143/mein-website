@@ -5,14 +5,16 @@ const { project } = Astro.props;
 ---
 
 <div class="project">
-  <a href={`/project/${project.slug}`}>
-    <img src={project.data.heroImage} />
-  </a>
-  <div class="project--info">
-    <h3 class="project--title">{project.data.title}</h3>
-    <p class="project--desc">
-      {project.data.description}
-    </p>
+  <div>
+    <a href={`/project/${project.slug}`}>
+      <img src={project.data.heroImage} />
+    </a>
+    <div class="project--info">
+      <h3 class="project--title">{project.data.title}</h3>
+      <p class="project--desc">
+        {project.data.description}
+      </p>
+    </div>
   </div>
   <div class="button--group">
     <a href={project.data.github}>
@@ -29,74 +31,74 @@ const { project } = Astro.props;
       )
     }
   </div>
-</div>
-<style>
-  h3,
-  p {
-    padding: 0;
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-  img {
-    transition: transform 0.2s;
-    border-bottom: 1px solid rgba(var(--black), 0.2);
-    width: 100%;
-  }
-  img:hover {
-    transform: scale(1.1);
-    border: 1px solid rgba(var(--black), 0.2);
-  }
-  .project {
-    border-radius: 5px;
-    border: 1px solid rgba(var(--black), 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  @media (max-width: 635px) {
-    .project {
-      width: 100%;
+  <style>
+    h3,
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
     }
     img {
-      height: auto;
+      transition: transform 0.2s;
+      border-bottom: 1px solid rgba(var(--black), 0.2);
+      width: 100%;
     }
     img:hover {
-      transform: scale(1);
+      transform: scale(1.1);
+      border: 1px solid rgba(var(--black), 0.2);
     }
-  }
-  .button--group {
-    padding: 1em;
-    display: flex;
-    gap: 1em;
-  }
-  .button {
-    border: 1px solid rgba(var(--black), 0.2);
-    border-radius: 5px;
-    font-weight: 600;
-    padding: 1em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.3em;
-    height: 100%;
-  }
-  .button:hover {
-    opacity: 0.5;
-  }
-  .button--primary {
-    color: rgb(var(--white));
-    background-color: rgb(var(--black));
-  }
-  .button--secondary {
-    color: rgb(var(--black));
-    background-color: rgb(var(--white));
-  }
-  .project--info {
-    padding: 1em;
-  }
-  [data-icon] {
-    font-size: 1.5rem;
-  }
-</style>
+    .project {
+      border-radius: 5px;
+      border: 1px solid rgba(var(--black), 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media (max-width: 635px) {
+      .project {
+        width: 100%;
+      }
+      img {
+        height: auto;
+      }
+      img:hover {
+        transform: scale(1);
+      }
+    }
+    .button--group {
+      padding: 1em;
+      display: flex;
+      gap: 1em;
+    }
+    .button {
+      border: 1px solid rgba(var(--black), 0.2);
+      border-radius: 5px;
+      font-weight: 600;
+      padding: 1em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      height: 100%;
+    }
+    .button:hover {
+      opacity: 0.5;
+    }
+    .button--primary {
+      color: rgb(var(--white));
+      background-color: rgb(var(--black));
+    }
+    .button--secondary {
+      color: rgb(var(--black));
+      background-color: rgb(var(--white));
+    }
+    .project--info {
+      padding: 1em;
+    }
+    [data-icon] {
+      font-size: 1.5rem;
+    }
+  </style>
+</div>
