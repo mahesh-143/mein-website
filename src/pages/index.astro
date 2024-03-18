@@ -33,15 +33,15 @@ const projects = (await getCollection("project"))
       </p>
       <SocialLinks />
       <section class="section">
-        <h2>Projects</h2>
-        <div class="section--container">
-          {projects.map((project) => <ProjectCard project={project} />)}
-        </div>
-      </section>
-      <section class="section">
         <h2>Articles</h2>
         <div class="section--container">
           {posts.map((post) => <BlogCard post={post} />)}
+        </div>
+      </section>
+      <section class="section">
+        <h2>Projects</h2>
+        <div class="section--container">
+          {projects.map((project) => <ProjectCard project={project} />)}
         </div>
       </section>
     </main>

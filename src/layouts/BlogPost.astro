@@ -55,12 +55,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <div class="title">
           <h1>{title}</h1>
           <div class="date">
-            <Icon name="mdi:calendar-outline" />
+            <Icon name="bi:calendar-event" />
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
                 <div class="last-updated-on">
-                  <Icon name="mdi:calendar-outline" />
+                  <Icon name="bi:calendar-event" />
                   Last updated on <FormattedDate date={updatedDate} />
                 </div>
               )

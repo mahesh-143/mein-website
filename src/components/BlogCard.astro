@@ -8,7 +8,7 @@ const { post } = Astro.props;
   <a href={`/blog/${post.slug}/`}>
     <h3 class="blog_card--title">{post.data.title}</h3>
     <p class="blog_card--date">
-      <Icon name="mdi:calendar-outline" />
+      <Icon name="bi:calendar-event" />
       <FormattedDate date={post.data.pubDate} />
     </p>
     <div class="tags">

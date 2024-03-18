@@ -10,7 +10,11 @@ const { project } = Astro.props;
       href={`/project/${project.slug}`}
       aria-label=`More info about the project ${project.data.title}`
     >
-      <img src={project.data.heroImage} alt="Project Thumbnail" />
+      <img
+        src={project.data.heroImage}
+        loading="lazy"
+        alt="Project Thumbnail"
+      />
     </a>
     <div class="project--info">
       <h3 class="project--title">{project.data.title}</h3>
@@ -22,7 +26,7 @@ const { project } = Astro.props;
   <div class="button--group">
     <a href={project.data.github}>
       <button class="button button--primary">
-        <Icon name="mdi:github" />
+        <Icon name="bi:github" />
         <span>Source Code</span>
       </button>
     </a>
@@ -30,7 +34,7 @@ const { project } = Astro.props;
       project.data.live && (
         <a href={project.data.live}>
           <button class="button button--secondary">
-            <Icon name="mdi:play" />
+            <Icon name="bi:play-fill" />
             <span>Live</span>
           </button>
         </a>
@@ -52,8 +56,8 @@ const { project } = Astro.props;
       width: 100%;
     }
     img:hover {
-      transform: scale(1.1);
-      border: 1px solid rgba(var(--primary), 0.2);
+      border-color: var(--accent);
+      opacity: 0.5;
     }
     .project {
       border-radius: 5px;
@@ -65,12 +69,6 @@ const { project } = Astro.props;
     @media (max-width: 635px) {
       .project {
         width: 100%;
-      }
-      img {
-        height: auto;
-      }
-      img:hover {
-        transform: scale(1);
       }
     }
     .button--group {
@@ -86,6 +84,7 @@ const { project } = Astro.props;
       cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 0.3em;
       color: rgb(var(--primary));
       background-color: rgb(var(--background_color));
@@ -99,7 +98,7 @@ const { project } = Astro.props;
       padding: 1em;
     }
     [data-icon] {
-      font-size: 1.5rem;
+      font-size: 1.5em;
     }
   </style>
 </div>
