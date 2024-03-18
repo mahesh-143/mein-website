@@ -6,8 +6,8 @@
 
 :root {
   --accent: #51d1c5;
-  --primary: 80, 80, 80;
-  --background_color: 254, 254, 254;
+  --primary: 22, 25, 35;
+  --background_color: 255, 255, 255;
 }
 
 .dark {
