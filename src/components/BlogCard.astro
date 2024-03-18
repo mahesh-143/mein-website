@@ -4,8 +4,8 @@ import FormattedDate from "../components/FormattedDate.astro";
 const { post } = Astro.props;
 ---
 
-<div class="blog_card">
-  <a href={`/blog/${post.slug}/`}>
+<a href={`/blog/${post.slug}/`}>
+  <div class="blog_card">
     <h3 class="blog_card--title">{post.data.title}</h3>
     <p class="blog_card--date">
       <Icon name="bi:calendar-event" />
@@ -15,8 +15,9 @@ const { post } = Astro.props;
       {post.data.tags.map((tag: string) => <span>#{tag}</span>)}
     </div>
     <p class="blog-card--desc">{post.data.description}</p>
-  </a>
-</div>
+    <div class="spacer"></div>
+  </div>
+</a>
 <style>
   h3,
   p {
@@ -26,18 +27,19 @@ const { post } = Astro.props;
     border: 1px solid rgba(var(--primary), 0.2);
     border-radius: 5px;
     padding: 1em;
-    height: 156px;
+    height: 176px;
     overflow: hidden;
+    transition: 0.4s ease;
+  }
+  .blog_card:hover {
+    border-color: var(--accent);
   }
   .tags {
     display: flex;
     gap: 1em;
   }
-  .blog_card a {
+  a {
     text-decoration: none;
-  }
-  .blog_card a:hover {
-    opacity: 0.5;
   }
   .blog-card--desc {
     color: rgb(var(--primary));
@@ -52,7 +54,11 @@ const { post } = Astro.props;
     display: flex;
     align-items: center;
     gap: 0.5em;
+    margin: 0.5em 0;
     color: rgba(var(--primary), 0.7);
     font-size: 0.875em;
+  }
+  .spacer {
+    height: 0.625em;
   }
 </style>
