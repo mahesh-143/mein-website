@@ -6,8 +6,11 @@ const { project } = Astro.props;
 
 <div class="project">
   <div>
-    <a href={`/project/${project.slug}`}>
-      <img src={project.data.heroImage} />
+    <a
+      href={`/project/${project.slug}`}
+      aria-label=`More info about the project ${project.data.title}`
+    >
+      <img src={project.data.heroImage} alt="Project Thumbnail" />
     </a>
     <div class="project--info">
       <h3 class="project--title">{project.data.title}</h3>
