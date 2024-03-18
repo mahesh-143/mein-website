@@ -3,7 +3,7 @@ title: "NihongoQuizDojo"
 description: "Learn Japanese letters by playing quiz"
 github: "https://github.com/mahesh-143/nihongoquizdojo"
 live: "https://nihongoquizdojo.vercel.app"
-heroImage: "/thumbnail-nihongoquizdojo.png"
+heroImage: "/thumbnail-nihongoquizdojo.webp"
 ---
 
 ![thumbnail-nihongoquizdojo](/thumbnail-nihongoquizdojo.png)

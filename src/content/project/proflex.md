@@ -3,7 +3,7 @@ title: "Proflex"
 description: "Dribbble clone for develpers"
 github: "https://github.com/mahesh-143/proflex"
 live: "https://proflexbymahesh.vercel.app"
-heroImage: "/thumbnail-proflex.png"
+heroImage: "/thumbnail-proflex.webp"
 ---
 
 ![thumbnail-proflex](/thumbnail-proflex.png)
