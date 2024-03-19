@@ -6,7 +6,7 @@ live: "https://proflexbymahesh.vercel.app"
 heroImage: "/thumbnail-proflex.webp"
 ---
 
-![thumbnail-proflex](/thumbnail-proflex.png)
+![thumbnail-proflex](/thumbnail-proflex.webp)
 
 ##Links
 

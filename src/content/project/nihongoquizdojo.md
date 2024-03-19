@@ -6,7 +6,7 @@ live: "https://nihongoquizdojo.vercel.app"
 heroImage: "/thumbnail-nihongoquizdojo.webp"
 ---
 
-![thumbnail-nihongoquizdojo](/thumbnail-nihongoquizdojo.png)
+![thumbnail-nihongoquizdojo](/thumbnail-nihongoquizdojo.webp)
 
 ## Links
 
