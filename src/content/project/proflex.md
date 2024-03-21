@@ -4,6 +4,7 @@ description: "Dribbble clone for develpers"
 github: "https://github.com/mahesh-143/proflex"
 live: "https://proflexbymahesh.vercel.app"
 heroImage: "/thumbnail-proflex.webp"
+tags: ["Next Js", "Tailwind CSS", "Prisma", "MongoDB"]
 ---
 
 ![thumbnail-proflex](/thumbnail-proflex.webp)

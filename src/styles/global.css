@@ -13,24 +13,41 @@
   --tag-bg-golang: #00add840;
   --tag-bg-react: #61dafb40;
   --tag-bg-javascript: #f1dc5440;
+  --tag-bg-nextjs: #00000040;
   --tag-bg-typescript: #3178c640;
   --tag-bg-docker: #1d63ed40;
   --tag-bg-aws: #ff990040;
   --tag-bg-rust: #f34c240;
+  --tag-bg-prisma: #21273340;
+  --tag-bg-tailwindcss: #43c0cd40;
+  --tag-bg-mondodb: #52ac4640;
+  --tag-bg-kumaui: #a0c6f240;
 
   /* Foreground Colors */
   --tag-fg-golang: #00add8;
   --tag-fg-react: #61dafb;
   --tag-fg-javascript: #f1dc54;
+  --tag-fg-nextjs: #ffffff;
   --tag-fg-typescript: #3178c6;
   --tag-fg-docker: #1d63ed;
   --tag-fg-aws: #ff9900;
   --tag-fg-rust: #f34c24;
+  --tag-fg-prisma: #ffffff;
+  --tag-fg-tailwindcss: #43c0cd;
+  --tag-fg-mondodb: #52ac46;
+  --tag-fg-kumaui: #a0c6f2;
 }
 
 .dark {
   --primary: 254, 254, 254;
   --background_color: 1, 1, 1;
+
+  /* Background Colors (Dark Mode) */
+  --tag-bg-nextjs: #ffffff40;
+
+  /* Forground Colors (Dark Mode) */
+
+  --tag-fg-nextjs: #000000;
 }
 
 @font-face {
@@ -72,31 +89,62 @@ body {
   line-height: 1.7;
 }
 
-.tag[data-tag="go"] {
+.tags {
+  margin: 0.5em 0;
+}
+.tag {
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.875em;
+  margin-right: 0.5em;
+  line-height: 16px;
+}
+
+.tag[data-tag="Go"] {
   background-color: var(--tag-bg-golang);
   color: var(--tag-fg-golang);
 }
-.tag[data-tag="react"] {
+.tag[data-tag="React"] {
   background-color: var(--tag-bg-react);
   color: var(--tag-fg-react);
 }
-.tag[data-tag="javascript"] {
+.tag[data-tag="Javascript"] {
   background-color: var(--tag-bg-javascript);
   color: var(--tag-fg-javascript);
 }
-.tag[data-tag="typescript"] {
+.tag[data-tag="Next Js"] {
+  background-color: var(--tag-bg-nextjs);
+  color: var(--tag-fg-nextjs);
+}
+.tag[data-tag="Tailwind CSS"] {
+  background-color: var(--tag-bg-tailwindcss);
+  color: var(--tag-fg-tailwindcss);
+}
+.tag[data-tag="Kuma UI"] {
+  background-color: var(--tag-bg-kumaui);
+  color: var(--tag-fg-kumaui);
+}
+.tag[data-tag="MongoDB"] {
+  background-color: var(--tag-bg-mondodb);
+  color: var(--tag-fg-mondodb);
+}
+.tag[data-tag="Prisma"] {
+  background-color: var(--tag-bg-prisma);
+  color: var(--tag-fg-prisma);
+}
+.tag[data-tag="Typescript"] {
   background-color: var(--tag-bg-typescript);
   color: var(--tag-fg-typescript);
 }
-.tag[data-tag="docker"] {
+.tag[data-tag="Docker"] {
   background-color: var(--tag-bg-docker);
   color: var(--tag-fg-docker);
 }
-.tag[data-tag="aws"] {
+.tag[data-tag="Aws"] {
   background-color: var(--tag-bg-aws);
   color: var(--tag-fg-aws);
 }
-.tag[data-tag="rust"] {
+.tag[data-tag="Rust"] {
   background-color: var(--tag-bg-rust);
   color: var(--tag-fg-rust);
 }

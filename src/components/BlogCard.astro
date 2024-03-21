@@ -12,7 +12,14 @@ const { post } = Astro.props;
       <FormattedDate date={post.data.pubDate} />
     </p>
     <div class="tags">
-      {post.data.tags.map((tag: string) => <span class="tag" data-tag={tag}>{tag}</span>)}
+      {
+        post.data.tags &&
+          post.data.tags.map((tag: string) => (
+            <span class="tag" data-tag={tag}>
+              {tag}
+            </span>
+          ))
+      }
     </div>
     <p class="blog-card--desc">{post.data.description}</p>
     <div class="spacer"></div>
@@ -34,18 +41,7 @@ const { post } = Astro.props;
   .blog_card:hover {
     border-color: var(--accent);
   }
-  .tags {
-    display: flex;
-    gap: 1em;
-    margin: 0.5em 0;
-  }
-  .tag{
-    padding: 0.25rem 0.5rem;
-    border-radius: 5px;
-    font-size: 0.875em;
-    line-height: 16px;
-    }
- a {
+  a {
     text-decoration: none;
   }
   .blog-card--desc {

@@ -23,6 +23,7 @@ const project = defineCollection({
     github: z.string(),
     live: z.string().optional(),
     heroImage: z.string().optional(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 

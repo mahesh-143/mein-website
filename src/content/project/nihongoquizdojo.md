@@ -4,6 +4,7 @@ description: "Learn Japanese letters by playing quiz"
 github: "https://github.com/mahesh-143/nihongoquizdojo"
 live: "https://nihongoquizdojo.vercel.app"
 heroImage: "/thumbnail-nihongoquizdojo.webp"
+tags: ["React", "Kuma UI"]
 ---
 
 ![thumbnail-nihongoquizdojo](/thumbnail-nihongoquizdojo.webp)
