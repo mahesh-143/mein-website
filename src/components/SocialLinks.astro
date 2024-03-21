@@ -37,8 +37,8 @@ import { Icon } from "astro-icon/components";
     text-decoration: none;
     color: rgb(var(--primary));
   }
-  .social-links a:hover {
-    opacity: 0.5;
+  .social-links a [data-icon]:hover {
+    color: var(--accent);
   }
   [data-icon] {
     font-size: 1.3rem;
