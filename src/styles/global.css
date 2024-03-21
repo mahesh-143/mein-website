@@ -5,14 +5,32 @@
  */
 
 :root {
-  --accent: #51d1c5;
+  --accent: #ff4c57;
   --primary: 22, 25, 35;
   --background_color: 255, 255, 255;
+
+  /* Background Colors */
+  --tag-bg-golang: #00add840;
+  --tag-bg-react: #61dafb40;
+  --tag-bg-javascript: #f1dc5440;
+  --tag-bg-typescript: #3178c640;
+  --tag-bg-docker: #1d63ed40;
+  --tag-bg-aws: #ff990040;
+  --tag-bg-rust: #f34c240;
+
+  /* Foreground Colors */
+  --tag-fg-golang: #00add8;
+  --tag-fg-react: #61dafb;
+  --tag-fg-javascript: #f1dc54;
+  --tag-fg-typescript: #3178c6;
+  --tag-fg-docker: #1d63ed;
+  --tag-fg-aws: #ff9900;
+  --tag-fg-rust: #f34c24;
 }
 
 .dark {
   --primary: 254, 254, 254;
-  --background_color: 22, 25, 35;
+  --background_color: 1, 1, 1;
 }
 
 @font-face {
@@ -52,6 +70,35 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.7;
+}
+
+.tag[data-tag="go"] {
+  background-color: var(--tag-bg-golang);
+  color: var(--tag-fg-golang);
+}
+.tag[data-tag="react"] {
+  background-color: var(--tag-bg-react);
+  color: var(--tag-fg-react);
+}
+.tag[data-tag="javascript"] {
+  background-color: var(--tag-bg-javascript);
+  color: var(--tag-fg-javascript);
+}
+.tag[data-tag="typescript"] {
+  background-color: var(--tag-bg-typescript);
+  color: var(--tag-fg-typescript);
+}
+.tag[data-tag="docker"] {
+  background-color: var(--tag-bg-docker);
+  color: var(--tag-fg-docker);
+}
+.tag[data-tag="aws"] {
+  background-color: var(--tag-bg-aws);
+  color: var(--tag-fg-aws);
+}
+.tag[data-tag="rust"] {
+  background-color: var(--tag-bg-rust);
+  color: var(--tag-fg-rust);
 }
 
 button {
