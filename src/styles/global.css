@@ -91,13 +91,17 @@ body {
 
 .tags {
   margin: 0.5em 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .tag {
   padding: 0.25rem 0.5rem;
   border-radius: 5px;
   font-size: 0.875em;
   margin-right: 0.5em;
+  margin-bottom: 0.5em;
   line-height: 16px;
+  white-space: nowrap;
 }
 
 .tag[data-tag="Go"] {
