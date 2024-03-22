@@ -40,7 +40,7 @@
 
 .dark {
   --primary: 254, 254, 254;
-  --background_color: 1, 1, 1;
+  --background_color: 18, 18, 18;
 
   /* Background Colors (Dark Mode) */
   --tag-bg-nextjs: #ffffff40;
