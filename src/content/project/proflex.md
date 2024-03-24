@@ -9,14 +9,16 @@ tags: ["Next Js", "Tailwind CSS", "Prisma", "MongoDB"]
 
 ![thumbnail-proflex](/thumbnail-proflex.webp)
 
-##Links
+## Links
 
-- [live](https://proflexbymahesh.vercel.app/)
+- [Live](https://proflexbymahesh.vercel.app/)
 - [Github](https://github.com/mahesh-143/proflex)
 
 ## Description
 
 Proflex is a Dribbble-inspired developer platform that allows developers to share their projects and Employers to hire developers. The platform is built using Next.js, Prisma and MongoDB.
+
+The primary objective of this project was to explore the latest features of Next Js 13, including AppRouter and RSC (React Server Components), while also integrating NextAuth for authentication and trying ShadcnUI. However, after achieving these initial goals, I decided to discontinue the project due to a lack of continued interest and did not proceed with the implementation of the remaining planned features.
 
 ## Features.
 
