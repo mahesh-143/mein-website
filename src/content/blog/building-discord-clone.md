@@ -1,5 +1,5 @@
 ---
-title: 01 Let's build Discord Clone
+title: Let's build Discord Clone
 description: Follow my journey as I document my learning experience while planning to build a Discord clone using GoLang.
 pubDate: 29-March-2024
 ---

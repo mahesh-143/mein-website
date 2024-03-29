@@ -28,13 +28,13 @@ const projects = (await getCollection("project"))
       <h1 class="headline">Hi there, I’m Mahesh Odedara</h1>
       <p class="sub-headline">
         A full-stack developer based in Gujarat, India. Currently working on a
-        <a href="https://github.com/mahesh-143">discord clone.</a> follow the process
-        through <a href="blog/">my blog.</a>
+        <a href="https://github.com/mahesh-143/chatwork">discord clone.</a> follow
+        the process through <a href="blog/">my blog.</a>
       </p>
       <SocialLinks />
       <section class="section">
         <div class="section--header">
-        <h2 class="section--title">Latest Articles</h2>
+          <h2 class="section--title">Latest Articles</h2>
           <a href="blog/">View More &rarr;</a>
         </div>
         <div class="section--container">
@@ -42,9 +42,8 @@ const projects = (await getCollection("project"))
         </div>
       </section>
       <section class="section">
-
         <div class="section--header">
-        <h2 class="section--title">Projects</h2>
+          <h2 class="section--title">Projects</h2>
           <a href="https://github.com/mahesh-143">View More on Github &rarr;</a>
         </div>
         <div class="section--container">
@@ -72,7 +71,7 @@ const projects = (await getCollection("project"))
         font-size: 0.875em;
       }
       .section--header > a:hover {
-        color: var(--accent); 
+        color: var(--accent);
       }
       .section--container {
         display: grid;
@@ -81,7 +80,7 @@ const projects = (await getCollection("project"))
         justify-content: center;
       }
       .section--title {
-        font-size: 1.5em;  
+        font-size: 1.5em;
       }
       @media (max-width: 940px) {
         .section--container {
