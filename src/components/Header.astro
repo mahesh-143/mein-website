@@ -85,11 +85,15 @@ import HeaderLink from "./HeaderLink.astro";
     text-decoration: none;
     opacity: 1;
   }
-  button {
+  #darkModeToggle {
     background: none;
     border: 1px solid rgba(var(--primary), 0.2);
     border-radius: 5px;
     padding: 0.5em;
+  }
+  #darkModeToggle:hover {
+    cursor: pointer;
+    border-color: var(--accent);
   }
   .sun {
     fill: black;
