@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import { collapseTextChangeRangesAcrossMultipleVersions } from "typescript";
 
 const { project } = Astro.props;
 ---
@@ -21,12 +20,12 @@ const { project } = Astro.props;
       <h3 class="project--title">{project.data.title}</h3>
       <div class="tags">
         {
-        project.data.tags &&
-          project.data.tags.map((tag: string) => (
-            <span class="tag" data-tag={tag}>
-              {tag}
-            </span>
-          ))
+          project.data.tags &&
+            project.data.tags.map((tag: string) => (
+              <span class="tag" data-tag={tag}>
+                {tag}
+              </span>
+            ))
         }
       </div>
 
