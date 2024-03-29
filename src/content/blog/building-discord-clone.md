@@ -1,6 +1,6 @@
 ---
 title: 01 Let's build Discord Clone
-description: Planning to build discord clone with go lang
+description: Follow my journey as I document my learning experience while planning to build a Discord clone using GoLang.
 pubDate: 29-March-2024
 ---
 
@@ -27,7 +27,7 @@ As for data storage, we have options like MongoDB (a NoSQL database) or PostgreS
 
 We can visualize the backend architecture using the following diagram. I might include more things in future as needed and update the diagram later on.
 
-![Diagram of Backend architecture](./images/diagram01.png)
+![Diagram of Backend architecture](/diagram01.png)
 
 Here's the schema to outline our app's database structure, which I generated with ChatGPT. It's only for providing a general overview and therefor it lacks specific columns such as avatar URLs and user bios. However, as we progress, these elements will be added into the schema.
 
