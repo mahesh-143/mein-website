@@ -1,5 +1,5 @@
 ---
-title: Setting up the HTTP server in Go
+title: "#1 Setting up the HTTP server in Go"
 description: Installing latest version of Go and setting up the HTTP Server.
 pubDate: 30-March-2024
 tags: ["Go"]
