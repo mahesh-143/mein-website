@@ -22,6 +22,7 @@
   --tag-bg-tailwindcss: #43c0cd40;
   --tag-bg-mondodb: #52ac4640;
   --tag-bg-kumaui: #a0c6f240;
+  --tag-bg-cassandra: #18c48840;
 
   /* Foreground Colors */
   --tag-fg-golang: #00add8;
@@ -36,6 +37,7 @@
   --tag-fg-tailwindcss: #43c0cd;
   --tag-fg-mondodb: #52ac46;
   --tag-fg-kumaui: #a0c6f2;
+  --tag-fg-cassandra: #18c488;
 }
 
 .dark {
@@ -151,6 +153,10 @@ body {
 .tag[data-tag="Rust"] {
   background-color: var(--tag-bg-rust);
   color: var(--tag-fg-rust);
+}
+.tag[data-tag="CassandraDB"] {
+  background-color: var(--tag-bg-cassandra);
+  color: var(--tag-fg-cassandra);
 }
 
 button {
